@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*---------------------------Genrael Clases---------------------------------------*/
+
+body {
+	font-size:13px;
+	color:#fff;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	background:#4765ff url(../images/bodyBg.jpg) left top repeat-x;
+}
+* {
+	margin:0px;
+	padding:0px;
+}
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.clr {
+	clear:both;
+}
+ul, li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+	color:#999999;
+}
+a:hover {
+	text-decoration: underline;
+}
+img {
+	border:0px;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.img-thumbnail {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+/*---------------------------Layout Content Clases---------------------------------*/
+
+#layout {                
+	max-width:240px;
+	margin:auto;
+}
+#top {
+	height:33px;
+	position: relative;
+	background-color:#344ab7;
+}
+#nav {
+	padding-top:0px;
+}
+
+#content {
+	padding:10px;
+}
+.dailyData{
+}
+.dailyData ul li{
+	margin-bottom:5px;
+	float:left;
+	width:240px;
+	font-size:16px;
+	font-weight:bold;
+}
+.dailyData ul li span{
+	margin:0px 4px;
+	color:#ebebeb;
+	font-size:13px;
+	font-weight:normal;
+}
+.message{
+	margin:40px auto 20px auto;
+	text-align:center;
+}
+.message h1{
+	font-size:22px;
+	font-weight:bold;
+	color:#FFF;
+	margin-bottom:15px;
+}
+.nav .first{
+	background:#6d85ff;
+	padding:15px;
+}
+.nav .second{
+	background:#4261ff;
+	padding:15px;	
+}
+.nav .second p,
+.nav .first p{
+	font-size:13px;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.nav .first div{
+	margin-bottom:5px;
+	display:inline-block;
+}
+.nav .first input{
+	width:25px;
+	margin-right:5px;
+	float:left;
+	margin-top:2px;
+}
+.nav .first label{
+	width:150px;
+	float:left;
+}
+.nav .second div{
+	margin-bottom:5px;
+	text-align:center;
+}
