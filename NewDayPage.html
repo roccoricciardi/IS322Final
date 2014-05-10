@@ -31,7 +31,7 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="first">
-                	<p>View Past Week's History</p>
+                	<p> View Past Weeks History </p>
                     <div>
                     	<img src="images/graph.png" alt="" />
                     </div>
@@ -293,10 +293,18 @@
         var meal1, userMeal1, meal2, userMeal2, meal3, userMeal3, drink1, userDrink1, drink2, userDrink2, drink3, userDrink3;
 	
 		var mealScore, wellness;
-
+		var imageHealthy = new Image;
+        var imageAverage = new Image;
+        var imageUnhealthy = new Image;
         
         	function wellnessCalc()
         	{
+        		imageHealthy.src = images/healthypeggyIconMini.png;
+        		imageAverage.src = images/peggyIconMini.png;
+        		imageUnhealthy.src = images/redpeggyIconMini.png;
+        		
+        	
+        	
         		meal1 = document.getElementById("Meal1");
         		userMeal1 = meal1.options[meal1.selectedIndex].value;
         		
@@ -323,15 +331,21 @@
         		wellness = "";
         		if(mealScore < 10 && > 5) 
         		{	wellness = "Healthy";
-        			document.write("You are healthy!!!");		}
+        			document.write("You are healthy!!!");		
+        			document.body.appendChild(imageHealthy);
+        		}
         		
         		if(mealScore < 15 && > 10) 
         		{	wellness = "Average";
-        			document.write("You are average!!!");	}
+        			document.write("You are average!!!");	
+        			document.body.appendChild(imageAverage);
+        		}
         		
         		if(mealScore < 19 && > 14) 
         		{	wellness = "Unhealthy";
-	        		document.write("You are unhealthy!!!");		}
+	        		document.write("You are unhealthy!!!");		
+	        		document.body.appendChild(imageUnhealthy);
+	        	}
 
 
 
