@@ -276,33 +276,37 @@
         </div>
         
         <!-- js function to calculate wellness -->
+
+
+	var meal1, userMeal1, meal2, userMeal2, meal3, userMeal3, drink1, userDrink1, drink2, userDrink2, drink3, userDrink3;
+	var mealScore, wellness;
         <script>
         	function wellnessCalc()
         	{
-        		var meal1 = document.getElementById("Meal1");
-        		var userMeal1 = meal1.options[meal1.selectedIndex].value;
+        		meal1 = document.getElementById("Meal1");
+        		userMeal1 = meal1.options[meal1.selectedIndex].value;
         		
-        		var meal2 = document.getElementById("Meal2");
-        		var userMeal2 = meal2.options[meal2.selectedIndex].value;
+        		meal2 = document.getElementById("Meal2");
+        		userMeal2 = meal2.options[meal2.selectedIndex].value;
         		
-        		var meal3 = document.getElementById("Meal3");
-        		var userMeal3 = meal3.options[meal3.selectedIndex].value;
+        		meal3 = document.getElementById("Meal3");
+        		userMeal3 = meal3.options[meal3.selectedIndex].value;
         		
-        		var drink1 = document.getElementById("Drink1");
-        		var userDrink1 = drink1.options[drink1.selectedIndex].value;
+        		drink1 = document.getElementById("Drink1");
+        		userDrink1 = drink1.options[drink1.selectedIndex].value;
         		
-        		var drink2 = document.getElementById("Drink2");
-        		var userDrink2 = drink2.options[drink1.selectedIndex].value;
+        		drink2 = document.getElementById("Drink2");
+        		userDrink2 = drink2.options[drink1.selectedIndex].value;
         		
-        		var drink3 = document.getElementById("Drink3");
-        		var userDrink3 = drink3.options[drink1.selectedIndex].value;
+        		drink3 = document.getElementById("Drink3");
+        		userDrink3 = drink3.options[drink1.selectedIndex].value;
         		
-        		var mealScore = userMeal1+userMeal2+userMeal3+userDrink1+userDrink2+userDrink3;
+        		mealScore = userMeal1+userMeal2+userMeal3+userDrink1+userDrink2+userDrink3;
         		//GREEN = 6     YELLOW = 12        RED = 18
         		//  6-10			10-14			14-18
         		
         		
-        		var wellness = "";
+        		wellness = "";
         		if(mealScore < 10 && > 5) 
         		{	wellness = "green";		}
         		
@@ -321,6 +325,14 @@
     	
     	
     	
+
+	
+
+
+
+
+
+
     	
 <!--    	
     	<ul>
