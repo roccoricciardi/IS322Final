@@ -299,8 +299,16 @@
         		//GREEN = 6     YELLOW = 12        RED = 18
         		//  6-10			10-14			14-18
         		
-        		 
         		
+        		var wellness = "";
+        		if(mealScore < 10 && > 5) 
+        		{	wellness = "green";		}
+        		
+        		if(mealScore < 15 && > 10) 
+        		{	wellness = "yellow";	}
+        		
+        		if(mealScore < 19 && > 14) 
+        		{	wellness = "red";		}
         	}
         </script>
         
@@ -308,6 +316,11 @@
         
     <div class="clr"></div>
     <div class="resultShow">
+    	
+    	
+    	
+    	
+<!--    	
     	<ul>
         	<li class="green">
             	<span></span>
@@ -321,7 +334,7 @@
             	<span></span>
                 <label><strong>18</strong> %</label>
             </li>
-        </ul>
+        </ul>   -->
     </div>
     <div class="clr"></div>
   </div>
