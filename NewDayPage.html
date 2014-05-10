@@ -53,7 +53,7 @@
         			<!--1 = GREEN   2 = YELLOW   3 = RED -->
         	<li>
             	<label>Meal 1:</label>
-                <select name="">
+                <select id="Meal1">
                     <option value = "1"		>Apple</option>
                     <option value = "3"		>Apple Pie</option>
                     <option value = "1"		>Banana</option>
@@ -113,7 +113,7 @@
             </li>
             <li>
             	<label>Drink 1:</label>
-                <select name="">
+                <select id="Drink1">
                     <option value = "1"		>Water</option>
                     <option value = "1"		>Milk</option>
                     <option value = "3"		>Soda</option>
@@ -125,7 +125,7 @@
             </li>
             <li>
             	<label>Meal 2:</label>
-                <select name="">
+                <select id="Meal2">
                     <option value = "1"		>Apple</option>
                     <option value = "3"		>Apple Pie</option>
                     <option value = "1"		>Banana</option>
@@ -185,7 +185,7 @@
             </li>
             <li>
             	<label>Drink 2:</label>
-                 <select name="">
+                 <select id="Drink2">
 		    <option>Water</option>
                     <option value = "1"		>Water</option>
                     <option value = "1"		>Milk</option>
@@ -198,7 +198,7 @@
             </li>
             <li>
             	<label>Meal 3:</label>
-                <select name="">
+                <select id="Meal3">
                     <option value = "1"		>Apple</option>
                     <option value = "3"		>Apple Pie</option>
                     <option value = "1"		>Banana</option>
@@ -258,7 +258,7 @@
             </li>
             <li>
             	<label>Drink 3:</label>
-                 <select name="">
+                 <select id="Drink3">
 		    <option>Water</option>
                     <option value = "1"		>Water</option>
                     <option value = "1"		>Milk</option>
@@ -272,6 +272,36 @@
             
         </ul>	
         </div>
+        
+        <!-- js function to calculate wellness -->
+        <script>
+        	function wellnessCalc()
+        	{
+        		var meal1 = document.getElementById("Meal1");
+        		var userMeal1 = meal1.options[meal1.selectedIndex].value;
+        		
+        		var meal2 = document.getElementById("Meal2");
+        		var userMeal2 = meal2.options[meal2.selectedIndex].value;
+        		
+        		var meal3 = document.getElementById("Meal3");
+        		var userMeal3 = meal3.options[meal3.selectedIndex].value;
+        		
+        		var drink1 = document.getElementById("Drink1");
+        		var userDrink1 = drink1.options[drink1.selectedIndex].value;
+        		
+        		var drink2 = document.getElementById("Drink2");
+        		var userDrink2 = drink2.options[drink1.selectedIndex].value;
+        		
+        		var drink3 = document.getElementById("Drink3");
+        		var userDrink3 = drink3.options[drink1.selectedIndex].value;
+        		
+        		
+        		
+        	}
+        </script>
+        
+        
+        
     <div class="clr"></div>
     <div class="resultShow">
     	<ul>
