@@ -308,13 +308,20 @@
         		
         		wellness = "";
         		if(mealScore < 10 && > 5) 
-        		{	wellness = "green";		}
+        		{	wellness = "Healthy";		}
         		
         		if(mealScore < 15 && > 10) 
-        		{	wellness = "yellow";	}
+        		{	wellness = "Average";	}
         		
         		if(mealScore < 19 && > 14) 
-        		{	wellness = "red";		}
+        		{	wellness = "Unhealthy";		}
+
+
+
+			document.write(wellness);
+
+
+
         	}
         </script>
         
