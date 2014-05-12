@@ -16,6 +16,14 @@
 
 </head>
 <body id="layout">
+
+<script src ="NewDayPage.html"></script>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mainJS.js"></script>
+
+
+
 <header>
   <div id="top">
     <div id="nav">
@@ -55,22 +63,122 @@
     	<div class="dailyData">
         	<ul>
             	<li>Yesterday's Food:</li>
-                <li><span>Bread</span> <span>Pizza</span> <span>Burger</span></li>
+                <li><span></span> <span></span> <span></span></li>
                 <li>Yesterday's Drink:</li>
-                <li><span>Tea</span> <span>Cold Drink</span> <span>Water</span></li>
+                <li><span></span> <span></span> <span></span></li>
             </ul>
         </div>
     <div class="clr"></div>
-    <div class="message">
-    	<h1>You are doing well!</h1>
-        <img src="images/peggyIcon.png" alt="Peggy" /> 
-    </div>
+
+
+
+    <!-- -->
+
+
+
+    <input type="button" value="Check Wellness" onClick="javascript:wellnessCalc();" style="cursor:pointer" />
+		
+		<div id="result">
+		
+		</div>
+        </div>
+        
+        <!-- js function to calculate wellness -->
+
+
+	
+        
+        <script type="text/javascript">
+        var meal1 = 0; 
+        var userMeal1 = 0; 
+        var meal2 = 0; 
+        var userMeal2 = 0; 
+        var meal3 = 0; 
+        var userMeal3 = 0; 
+        var drink1 = 0; 
+        var userDrink1 = 0; 
+        var drink2 = 0; 
+        var userDrink2 = 0; 
+        var drink3 = 0; 
+        var userDrink3 = 0;	
+		var mealScore = 0; 
+		var wellness = "";
+		var imageHealthy = new Image;
+        var imageAverage = new Image;
+        var imageUnhealthy = new Image;
+        
+        	function wellnessCalc()
+        	{
+        		imageHealthy.src = "images/healthypeggyIconMini.png";
+        		imageAverage.src = "images/peggyIconMini.png";
+        		imageUnhealthy.src = "images/redpeggyIconMini.png";
+        		
+        	
+        	
+        		meal1 = document.getElementById("Meal1");
+        		userMeal1 = meal1.options[meal1.selectedIndex].value;
+        		
+        		meal2 = document.getElementById("Meal2");
+        		userMeal2 = meal2.options[meal2.selectedIndex].value;
+        		
+        		meal3 = document.getElementById("Meal3");
+        		userMeal3 = meal3.options[meal3.selectedIndex].value;
+        		
+        		drink1 = document.getElementById("Drink1");
+        		userDrink1 = drink1.options[drink1.selectedIndex].value;
+        		
+        		drink2 = document.getElementById("Drink2");
+        		userDrink2 = drink2.options[drink2.selectedIndex].value;
+        		
+        		drink3 = document.getElementById("Drink3");
+        		userDrink3 = drink3.options[drink3.selectedIndex].value;
+        		
+		
+				
+        		mealScore = parseInt(userMeal1)+parseInt(userMeal2)+parseInt(userMeal3)+parseInt(userDrink1)+parseInt(userDrink2)+parseInt(userDrink3);
+        		//GREEN = 6     YELLOW = 12        RED = 18
+        		//  6-10			10-14			14-18
+        		
+        		//wellness = "";
+				res= document.getElementById("result");
+				if(mealScore < parseInt(10) && mealScore> parseInt(5)) 
+				{	wellness = "Healthy";
+					//document.write("You are healthy!!!");		
+					//document.body.appendChild(imageHealthy);
+					document.getElementById("result").innerHTML="You are healthy!!!<br>" ;	
+					res.appendChild(imageHealthy);	
+				}
+				
+				if(mealScore < parseInt(15) && mealScore> parseInt(10)) 
+				{	wellness = "Average";
+					//document.write("You are average!!!");	
+					//document.body.appendChild(imageAverage);
+					document.getElementById("result").innerHTML="You are average!!!<br>" ;		
+					res.appendChild(imageAverage);
+				}
+				
+				if(mealScore < parseInt(19) && mealScore> parseInt(14)) 
+				{	wellness = "Unhealthy";
+					//document.write("You are unhealthy!!!");		
+					//document.body.appendChild(imageUnhealthy);
+					document.getElementById("result").innerHTML="You are unhealthy!!!<br>" ;		
+					res.appendChild(imageUnhealthy);
+				}
+
+        	}
+        </script>
+    
+    
+    
+    <!-- -->
+    
+    
+    
     <div class="clr"></div>
   </div>
 </section>
 
-<script src="js/jquery.js"></script> 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/mainJS.js"></script>
+
+
 </body>
 </html>
